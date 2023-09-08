@@ -1,7 +1,11 @@
-<app-header titulo="Login"></app-header>
-
 <ion-content class="ion-padding" color="dark">
-  <h1>Iniciar session</h1>
+  <div class="titulo">
+    <ion-text color="danger">
+      <h1>BIENVENIDO A UNIGO</h1>
+    </ion-text>
+  </div>
+
+  <h2>Iniciar session</h2>
   <form #formLogin="ngForm" (ngSubmit)="onSubmit()">
 
     <ion-item color="dark">
@@ -12,10 +16,19 @@
       <ion-input labelPlacement="floating" label="Password" required type="password" aria-label="password" name="password" [(ngModel)]="usuario.password" ></ion-input>
     </ion-item>
 
-    <ion-button expand="full" color="danger" type="submit" class="ion-padding" [disabled]="formLogin.invalid">
+    <ion-button expand="full" color="danger" type="submit" shape="round" class="ion-padding" [disabled]="formLogin.invalid">
       Login
     </ion-button>
   </form>
+
+  <div class="register">
+    <ion-text>
+      <h4>¿ No tienes cuenta ?</h4>
+      <ion-button (click)="irRegister()" expand="block" fill="clear" shape="round" color="danger">
+        Registrate
+      </ion-button>
+    </ion-text>
+  </div>
   
 </ion-content>
 

@@ -22,6 +22,10 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  irRegister(){
+    this.router.navigate(['/register'])
+  }
+
   onSubmit()
   {
     if (this.usuario.username=="admin@admin.cl" && this.usuario.password=="12345"){
