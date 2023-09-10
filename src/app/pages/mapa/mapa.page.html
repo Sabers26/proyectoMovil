@@ -1,23 +1,15 @@
+<app-header titulo="mapa"></app-header>
+
 <ion-content class="ion-padding" color="dark">
 
   <ion-text color="danger">
     <h1>UniGO</h1>
   </ion-text>
 
-  <ion-item color="dark">
-    <h4>pasaje dos sur 768</h4>
-  </ion-item>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Buses_del_Gran_Concepci%C3%B3n.png" alt="">
 
-  <ion-item color="dark">
-    <h4>josue loyola </h4>
-  </ion-item>
-
-  <ion-item color="dark">
-    <h4>toyota gris abc-123</h4>
-  </ion-item>
-
-  <ion-button expand="full" color="danger" type="submit" shape="round" class="ion-padding">
-    $3030
+  <ion-button expand="full" color="danger" type="submit" shape="round" class="ion-padding" (click)="nuevoViaje()">
+    agregar viaje
   </ion-button>
 
 </ion-content>

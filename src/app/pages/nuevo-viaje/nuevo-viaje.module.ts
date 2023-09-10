@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { NuevaClavePageRoutingModule } from './nueva-clave-routing.module';
+import { NuevoViajePageRoutingModule } from './nuevo-viaje-routing.module';
 
-import { NuevaClavePage } from './nueva-clave.page';
+import { NuevoViajePage } from './nuevo-viaje.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from 'src/app/components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    NuevaClavePageRoutingModule,
+    NuevoViajePageRoutingModule,
     ComponentsModule
   ],
-  declarations: [NuevaClavePage]
+  declarations: [NuevoViajePage]
 })
-export class NuevaClavePageModule {}
+export class NuevoViajePageModule {}

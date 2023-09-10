@@ -26,7 +26,9 @@ export class RegisterPage implements OnInit {
 
   onSubmit()
   {
+
     this.router.navigate(['/home'])
+    this.presentAlert()
   }
 
   irLogin(){
@@ -37,7 +39,7 @@ export class RegisterPage implements OnInit {
     const alert = await this.alertController.create({
       header: 'Alerta',
       subHeader: 'Información',
-      message: "Algun campo se encuentra vacio",
+      message: "Cuenta creada con exito",
       buttons: ['OK'],
       backdropDismiss:false,
       

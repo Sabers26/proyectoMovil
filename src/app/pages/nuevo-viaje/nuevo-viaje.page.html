@@ -1,0 +1,30 @@
+<app-header titulo="Nuevo Viaje"></app-header>
+
+<ion-content class="ion-padding" color="dark">
+  <div class="titulo">
+    <ion-text color="danger">
+      <h1>UniGO</h1>
+    </ion-text>
+  </div>
+
+  <h2>Ingrese informacion del viaje</h2>
+  <form #formViaje="ngForm" (ngSubmit)="onSubmit()">
+
+    <ion-item color="dark">
+      <ion-input labelPlacement="floating" label="Destino" required type="text" aria-label="destino" name="destino" [(ngModel)]="viaje.destino" ></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-input labelPlacement="floating" label="Precio" required type="number" aria-label="precio" name="precio" [(ngModel)]="viaje.precio" ></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-input labelPlacement="floating" label="Patente" required type="text" aria-label="patente" name="patente" [(ngModel)]="viaje.patente" ></ion-input>
+    </ion-item>
+
+    <ion-button (click)="onSubmit()" expand="full" color="danger" type="submit" shape="round" class="ion-padding" [disabled]="formViaje.invalid">
+      Ingresar
+    </ion-button>
+  </form>
+  
+</ion-content>

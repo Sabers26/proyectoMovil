@@ -3,11 +3,19 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-mapa',
-  templateUrl: './mapa.page.html',
-  styleUrls: ['./mapa.page.scss'],
+  selector: 'app-nuevo-viaje',
+  templateUrl: './nuevo-viaje.page.html',
+  styleUrls: ['./nuevo-viaje.page.scss'],
 })
-export class MapaPage implements OnInit {
+export class NuevoViajePage implements OnInit {
+
+  viaje={
+    destino:'',
+    precio:'',
+    patente:''
+  }
+
+
   constructor(
     private router:Router,
     private alertController:AlertController
@@ -16,15 +24,17 @@ export class MapaPage implements OnInit {
   ngOnInit() {
   }
 
-  nuevoViaje(){
-    this.router.navigate(['/nuevo-viaje'])
+  onSubmit()
+  {
+    this.router.navigate(['/home'])
+    this.presentAlert()
   }
 
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Alerta',
       subHeader: 'Información',
-      message: "Viaje aceptado con exito",
+      message: "Viaje ingresado correctamente",
       buttons: ['OK'],
       backdropDismiss:false,
       
@@ -33,4 +43,5 @@ export class MapaPage implements OnInit {
     await alert.present();
 
   }
+
 }
