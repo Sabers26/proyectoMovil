@@ -1,7 +1,11 @@
 <ion-content class="ion-padding" color="dark">
   <form #formRegister="ngForm" (ngSubmit)="onSubmit()">
 
-    <h1>Registrate</h1>
+    <ion-text color="danger">
+      <h1>UniGO</h1>
+    </ion-text>
+
+    <h4>Registrate</h4>
 
     <ion-item color="dark">
       <ion-input labelPlacement="floating" label="Nombre" required type="text" aria-label="nombre" name="nombre" [(ngModel)]="registro.nombre" ></ion-input>

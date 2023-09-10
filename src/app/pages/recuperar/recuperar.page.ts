@@ -3,21 +3,20 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-recuperar',
+  templateUrl: './recuperar.page.html',
+  styleUrls: ['./recuperar.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class RecuperarPage implements OnInit {
 
   usuario={
-    username:'',
-    password:''
+    correo:''
   }
 
   constructor(
     private router:Router,
     private alertController:AlertController
-    ) { }
+  ) { }
 
   ngOnInit() {
   }
@@ -28,8 +27,8 @@ export class LoginPage implements OnInit {
 
   onSubmit()
   {
-    if (this.usuario.username=="admin@admin.cl" && this.usuario.password=="12345"){
-      this.router.navigate(['/home', this.usuario])
+    if (this.usuario.correo=="admin@admin.cl"){
+      this.router.navigate(['/nueva-clave'])
     }
     else{
       this.presentAlert()
@@ -41,7 +40,7 @@ export class LoginPage implements OnInit {
     const alert = await this.alertController.create({
       header: 'Alerta',
       subHeader: 'Información',
-      message: "Usuario y/o password incorrectos",
+      message: "Correo no existente",
       buttons: ['OK'],
       backdropDismiss:false,
       

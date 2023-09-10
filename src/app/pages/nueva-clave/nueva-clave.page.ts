@@ -3,37 +3,28 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-nueva-clave',
+  templateUrl: './nueva-clave.page.html',
+  styleUrls: ['./nueva-clave.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class NuevaClavePage implements OnInit {
 
   usuario={
-    username:'',
-    password:''
+    clave:''
   }
 
   constructor(
     private router:Router,
     private alertController:AlertController
-    ) { }
+  ) { }
 
   ngOnInit() {
   }
 
-  irRegister(){
-    this.router.navigate(['/register'])
-  }
-
   onSubmit()
   {
-    if (this.usuario.username=="admin@admin.cl" && this.usuario.password=="12345"){
-      this.router.navigate(['/home', this.usuario])
-    }
-    else{
-      this.presentAlert()
-    }
+      
+    this.router.navigate(['/login'])
 
   }
 
@@ -41,7 +32,7 @@ export class LoginPage implements OnInit {
     const alert = await this.alertController.create({
       header: 'Alerta',
       subHeader: 'Información',
-      message: "Usuario y/o password incorrectos",
+      message: "Correo no existente",
       buttons: ['OK'],
       backdropDismiss:false,
       
@@ -51,5 +42,4 @@ export class LoginPage implements OnInit {
 
  
   }
-
 }

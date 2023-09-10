@@ -1,0 +1,23 @@
+<ion-content class="ion-padding" color="dark">
+  <ion-text color="danger">
+    <h1>UniGO</h1>
+  </ion-text>
+
+  <ion-text>
+    <H2>Recuperar Contraseña</H2>
+  </ion-text>
+
+  <p>Ingresa tu correo para cambiar la contraseña</p>
+
+  <form #formCorreo="ngForm" (ngSubmit)="onSubmit()">
+
+    <ion-item color="dark">
+      <ion-input labelPlacement="floating" label="E-mail" required type="email" aria-label="Email" name="email" [(ngModel)]="usuario.correo" ></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" color="danger" type="submit" shape="round" class="ion-padding" [disabled]="formCorreo.invalid">
+      Enviar
+    </ion-button>
+  </form>
+
+</ion-content>
