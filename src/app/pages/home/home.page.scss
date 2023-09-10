@@ -25,3 +25,28 @@
 #container a {
   text-decoration: none;
 }
+
+ion-item {
+  --padding-start: 0;
+}
+
+img{
+  margin: 5px;
+}
+
+ion-card {
+  --background: #e12222;
+  --color: #ffffff;
+}
+
+ion-card-title {
+  --color: #000000;
+}
+
+ion-card-subtitle {
+  --color: #000000;
+}
+
+h1{
+  color: red;
+}

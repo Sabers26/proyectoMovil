@@ -12,11 +12,4 @@ export class HomePage {
 
   constructor(private router:Router) {}
 
-  public irLogin()
-  {
-      console.log("Fuiste al login!");
-      this.router.navigate(['login']);
-
-  }
-
 }
