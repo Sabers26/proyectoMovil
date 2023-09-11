@@ -1,0 +1,7 @@
+.seleccted{
+    color: black;
+}
+
+.seleccted::selection{
+    color: red;
+}

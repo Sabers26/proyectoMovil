@@ -10,6 +10,10 @@ export class HeaderComponent  implements OnInit {
   @Input() titulo='';
   constructor() { }
 
+  menu() {
+    
+  }
+
   ngOnInit() {}
 
 }

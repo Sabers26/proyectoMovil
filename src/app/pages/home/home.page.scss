@@ -47,6 +47,8 @@ ion-card-subtitle {
   --color: #000000;
 }
 
-h1{
-  color: red;
+
+.animate__animated.animate__pulse {
+  --animate-duration: 2s;
+  --animate-repeat: 2;
 }

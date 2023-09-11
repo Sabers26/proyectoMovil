@@ -38,6 +38,14 @@ const routes: Routes = [
     path: 'nuevo-viaje',
     loadChildren: () => import('./pages/nuevo-viaje/nuevo-viaje.module').then( m => m.NuevoViajePageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'tabs-general',
+    loadChildren: () => import('./pages/tabs-general/tabs-general.module').then( m => m.TabsGeneralPageModule)
+  },
 
 
 ];
