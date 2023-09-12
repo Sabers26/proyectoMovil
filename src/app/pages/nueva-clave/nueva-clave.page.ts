@@ -25,6 +25,7 @@ export class NuevaClavePage implements OnInit {
   {
       
     this.router.navigate(['/login'])
+    this.presentAlert()
 
   }
 
@@ -32,7 +33,7 @@ export class NuevaClavePage implements OnInit {
     const alert = await this.alertController.create({
       header: 'Alerta',
       subHeader: 'Información',
-      message: "Correo no existente",
+      message: "Contraseña Cambiada con exito!",
       buttons: ['OK'],
       backdropDismiss:false,
       
