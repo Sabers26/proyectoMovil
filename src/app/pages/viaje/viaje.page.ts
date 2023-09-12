@@ -18,7 +18,7 @@ export class ViajePage implements OnInit {
   }
 
   aceptarViaje(){
-    this.router.navigate(['/home'])
+    this.router.navigate(['/tabs-general/home'])
     this.presentAlert()
   }
 

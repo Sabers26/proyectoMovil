@@ -17,7 +17,7 @@ export class MapaPage implements OnInit {
   }
 
   nuevoViaje(){
-    this.router.navigate(['/nuevo-viaje'])
+    this.router.navigate(['/tabs-general/nuevo-viaje'])
   }
 
   async presentAlert() {

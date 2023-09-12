@@ -26,7 +26,7 @@ export class NuevoViajePage implements OnInit {
 
   onSubmit()
   {
-    this.router.navigate(['/home'])
+    this.router.navigate(['/tabs-general/home'])
     this.presentAlert()
   }
 
