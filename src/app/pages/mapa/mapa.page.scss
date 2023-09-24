@@ -1,0 +1,22 @@
+.center{
+    text-align: center;
+}
+
+ion-card {
+    --background: #e12222;
+    --color: #ffffff;
+  }
+  
+  ion-card-title {
+    --color: #000000;
+  }
+  
+  ion-card-subtitle {
+    --color: #000000;
+  }
+  
+  
+  .animate__animated.animate__pulse {
+    --animate-duration: 2s;
+    --animate-repeat: 2;
+  }
