@@ -12,6 +12,7 @@ export class NuevoViajePage implements OnInit {
   viaje={
     destino:'',
     precio:'',
+    dispo:'',
     patente:''
   }
 
@@ -26,7 +27,7 @@ export class NuevoViajePage implements OnInit {
 
   onSubmit()
   {
-    this.router.navigate(['/tabs-general/home'])
+    this.router.navigate(['/tabs-general/mapa'])
     this.presentAlert()
   }
 
